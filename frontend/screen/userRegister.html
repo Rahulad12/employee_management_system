@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../css/userLogin.css" />
+    <title>User register</title>
+  </head>
+  <body>
+    <div id="auth-container">
+      <div class="hero">
+        <h1>Register Screen</h1>
+      </div>
+      <div id="form-container">
+        <form id="form">
+          <div class="email-container">
+            <label for="email">Email</label>
+            <input
+              type="text"
+              name="email"
+              id="email"
+              placeholder="Enter your email"
+            />
+          </div>
+          <span id="email-error-message"></span>
+          <div class="password-container">
+            <label for="password">Password</label>
+            <input
+              type="password"
+              name="password"
+              id="password"
+              placeholder="Enter your password"
+            />
+          </div>
+          <span id="password-error-message"></span>
+          <small style="color: rgb(186, 169, 16); text-align: left"
+            >Password Should be at least 8 characters long and contain at least
+            one uppercase letter, one number, and one special character.</small
+          >
+          <div class="button-container">
+            <button type="submit" id="submit-button" class="login-button btn">
+              Register
+            </button>
+          </div>
+          <span id="error-message"></span>
+          <p class="form-text-end">
+            Already have account?
+            <span>
+              <a href="./userLogin.html"> Login</a>
+            </span>
+          </p>
+        </form>
+      </div>
+    </div>
+    <script src="../js/controllers/userRegister.js" type="module"></script>
+  </body>
+</html>

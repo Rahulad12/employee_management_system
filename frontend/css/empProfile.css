@@ -1,0 +1,42 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.employee-profile__container {
+  display: flex;
+}
+.profile-header {
+  height: 20vh;
+  background: linear-gradient(to right, #4597d5, #23547b);
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.profile-header h3 {
+  font-size: 2rem;
+  font-weight: bold;
+}
+.profile-body {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 2rem;
+}
+.profile-section {
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
+  margin: 1rem;
+  display: flex;
+  align-items: center;
+  padding: 2rem;
+  height: 2em;
+  width: 100%;
+}
+.profile-section label {
+  font-size: 1rem;
+  font-weight: bold;
+  margin-right: 0.5rem;
+}

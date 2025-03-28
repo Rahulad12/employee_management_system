@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../css/userLogin.css" />
+    <title>User Login</title>
+  </head>
+  <body>
+    <div id="auth-container">
+      <div class="hero">
+        <h1>Login Screen</h1>
+      </div>
+      <div id="form-container">
+        <form id="form">
+          <div class="email-container">
+            <label for="email">Email</label>
+            <input
+              type="email"
+              name="email"
+              id="email"
+              placeholder="Enter your email"
+            />
+          </div>
+          <span id="email-error-message"></span>
+          <div class="password-container">
+            <label for="password">Password</label>
+            <input
+              type="password"
+              name="password"
+              id="password"
+              placeholder="Enter your password"
+            />
+          </div>
+          <span id="password-error-message"></span>
+          <div class="button-container">
+            <button type="submit" id="submit-button" class="login-button btn">
+              Login
+            </button>
+          </div>
+          <span id="error-message"></span>
+          <p class="form-text-end">
+            Donot have account?
+            <span>
+              <a href="./userRegister.html"> Register</a>
+            </span>
+          </p>
+        </form>
+      </div>
+    </div>
+    <script src="../js/controllers/userLoign.js" type="module"></script>
+  </body>
+</html>

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="../css/empLeave.css" />
+  <link rel="stylesheet" href="../css/Dashboard.css" />
+  <title>Document</title>
+</head>
+
+<body>
+  <div class="employee-leave-container">
+    <div id="toast-container"></div>
+    <div id="side-bar"></div>
+    <div id="content">
+      <div class="employee-leave-header">
+        <h3>Employee Leave</h3>
+      </div>
+      <div class="employee-leave-body">
+        <div class="employee-leave-section">
+          <div class="leave-section-left">
+            <form id="leave-form">
+              <div class="form-group">
+                <label for="employee-leave-type">Leave Type</label>
+                <select id="employee-leave-type" name="employee-leave-type">
+                  <option value="unpaid">Unpaid</option>
+                  <option value="sick">Sick</option>
+                  <option value="maternity">Maternity</option>
+                  <option value="paternity">Paternity</option>
+                  <option value="annual">Annual</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="employee-leave-start-date">Start Date</label>
+                <input type="date" id="employee-leave-start-date" name="employee-leave-start-date" />
+              </div>
+              <div class="form-group">
+                <label for="employee-leave-end-date">End Date</label>
+                <input type="date" id="employee-leave-end-date" name="employee-leave-end-date" />
+              </div>
+              <div class="form-group">
+                <label for="employee-leave-reason">Reason</label>
+                <textarea id="employee-leave-reason" name="employee-leave-reason"></textarea>
+              </div>
+
+              <button type="submit" id="employee-leave-button" class="button">Take Leave</button>
+            </form>
+
+          </div>
+
+          <div class="leave-section-right">
+            <div class="box" style="display: flex; gap:.5rem;">
+              <label>Leave Status:</label>
+              <span id="employee-leave-status"></span>
+            </div>
+            <button id="employee-total-leave" type="submit" class="button">Total Leave</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="total-leave-modal"></div>
+  </div>
+</body>
+
+<script src="../js/controllers/employeeLeave.js" type="module"></script>
+
+</html>

@@ -1,0 +1,169 @@
+/* General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Employee Leave Container */
+.employee-leave-container {
+    display: flex;
+    height: 100vh;
+}
+
+/* Header */
+.employee-leave-header {
+    height: 20vh;
+    background: linear-gradient(to right, #4597d5, #23547b);
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.employee-leave-header h3{
+    font-size: 2rem;
+    font-weight: bold;
+}
+/* Body */
+.employee-leave-section {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    gap: 0.5rem;
+}
+
+/* Left Section */
+.leave-section-left {
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    width: 50%;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+input[type="date"],
+select,
+textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+textarea {
+    resize: none;
+    height: 80px;
+}
+
+.button {
+    background: linear-gradient(to right, #4597d5, #237b72);
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+.button:hover {
+    background-color: #357ab8;
+}
+
+/* Right Section */
+.leave-section-right {
+    flex: 1;
+    padding: 20px;
+    border-radius: 5px;
+    width: 50%;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.box {
+    margin-bottom: 15px;
+    padding: 10px;
+    background-color: #ffffff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.box label {
+    font-weight: bold;
+    display: block;
+    margin-bottom: 5px;
+}
+
+.box span {
+    display: block;
+    font-size: 14px;
+    color: #555;
+}
+
+#total-leave-modal {
+    display: none;
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+#total-leave-modal .modal-content {
+    margin: 10% auto;
+    padding-left: 1rem;
+    width: 50%;
+    border-radius: .5rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+}
+
+#total-leave-modal .close {
+    font-size: 28px;
+    color: #333;
+    float: right;
+    font-weight: bold;
+    cursor: pointer;
+    margin-right: 1rem;
+}
+
+#total-leave-modal .close:hover,
+#total-leave-modal .close:focus {
+    color: #b81414;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+#total-leave-modal table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 1rem;
+}
+
+#total-leave-modal th {
+    background-color: #4597d5;
+    color: white;
+    padding: 10px;
+}
+
+#total-leave-modal td {
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+}
+
+#toal-leave-modal tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
