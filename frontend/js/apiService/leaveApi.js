@@ -1,9 +1,10 @@
 import { LEAVE_URL } from "../constant.js";
 
-const createLeave = async (leave) => {
-  console.log(leave);
+const createLeave = async (leave, empId) => {
+  console.log(leave, empId);
+
   try {
-    const response = await fetch(`${LEAVE_URL}`, {
+    const response = await fetch(`${LEAVE_URL}/${empId}`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

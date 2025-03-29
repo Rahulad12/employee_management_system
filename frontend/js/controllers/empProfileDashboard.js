@@ -10,6 +10,7 @@ export const empProfileDashboard = async () => {
 
     if (employee.success) {
       updateUI(employee.emp[0]);
+      localStorage.setItem("empId", employee.emp[0]._id);
     } else {
       console.error(employee.message);
     }

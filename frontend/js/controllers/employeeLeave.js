@@ -38,7 +38,9 @@ export const employeeLeave = async () => {
       showToast("All fields are required  ", "error");
       return;
     }
-    const response = await createLeave(leaveData);
+    const empId = localStorage.getItem("empId");
+    const response = await createLeave(leaveData, empId);
+
     if (response.success) {
       showToast(response.message, response.status);
       leaveForm.reset();
@@ -48,6 +50,8 @@ export const employeeLeave = async () => {
       leaveForm.reset();
     }
   };
+
+  // Modal for total leave
   const totalLeaveModal = () => {
     const modal = document.getElementById("total-leave-modal");
     modal.innerHTML = `
