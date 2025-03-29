@@ -7,26 +7,26 @@
 - MongoDB for Database
 
 # For Running project
-    sh```
-        https://github.com/Rahulad12/employee_management_system.git
+    ```sh
+    https://github.com/Rahulad12/employee_management_system.git
     ```
-# For Running Client
-    sh```
-        cd frontend
+# For Setup Client(frontend)
+    ```sh
+    cd frontend
     ```
-    sh```
-        npm install 
+    ```sh
+    npm install 
     ```
-    sh```
-        npm run dev
+    ```sh
+    npm run dev
     ```
-# For Running Server
-    sh```
-        cd server
+# For setup Server(backend)
+    ```sh
+    cd server
     ```
-    sh```
-        npm install
+    ```sh
+    npm install
     ```
-    sh ```
-        npm run server
+     ```sh
+    npm run server
     ```
