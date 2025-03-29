@@ -32,7 +32,7 @@ const updateUI = (employeeData) => {
 
   employeeName.textContent = employeeData.name;
   employeeEmail.textContent = employeeData.email;
-  employeeJoinDate.textContent = employeeData.join_date;
+  employeeJoinDate.textContent = new Date(employeeData.join_date).toLocaleDateString();
   employeePhone.textContent = employeeData.phone;
   employeePosition.textContent = employeeData.position;
   employeeDepartment.textContent = employeeData.department;
