@@ -1,0 +1,94 @@
+.emp-setting-container {
+  display: flex;
+  border: 2px soldi red;
+}
+
+.emp-setting-container .emp-setting-header {
+  height: 20vh;
+  background: linear-gradient(to right, #4597d5, #23547b);
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.emp-setting-header h3 {
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.setting-body {
+  /* border: 2px solid red; */
+  height: 100vh;
+  display: flex;
+  gap: 1rem;
+}
+
+/* Styling for each card (Change Password and Change Email) */
+.change-password-card,
+.change-email-card {
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  flex: 1;
+}
+
+/* Card headings */
+.change-password-card h3,
+.change-email-card h3 {
+  margin-bottom: 20px;
+  font-size: 1.5rem;
+  color: #333;
+}
+
+/* Form container styling */
+.password-container,
+.email-container {
+  margin-bottom: 15px;
+}
+
+/* Label styling */
+.password-container label,
+.email-container label {
+  display: block;
+  margin-bottom: 5px;
+  font-size: 0.9rem;
+  color: #555;
+}
+
+/* Input field styling */
+.password-container input,
+.email-container input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 1rem;
+  color: #333;
+  transition: border-color 0.3s ease;
+}
+
+.password-container input:focus,
+.email-container input:focus {
+  border-color: #007bff;
+  outline: none;
+}
+
+/* Button styling */
+.change-password-btn,
+.change-email-btn {
+  background: linear-gradient(to right, #4597d5, #237b72);
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+
+.change-password-btn:hover,
+.change-email-btn:hover {
+  background-color: #357ab8;
+}

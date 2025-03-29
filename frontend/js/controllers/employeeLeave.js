@@ -68,7 +68,7 @@ export const employeeLeave = async () => {
         </tr>
       </thead>
       <tbody>
-        ${totalTakenLeaves.leaves.map((leave) => {
+        ${totalTakenLeaves?.leaves?.map((leave) => {
       return `
           <tr>
             <td>${leave.leave_type}</td>

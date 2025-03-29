@@ -20,7 +20,7 @@ export const loginUser = async (email, password) => {
       },
       body: JSON.stringify(loginData),
     });
-  console.log(response)
+    console.log(response)
     const result = await response.json();
     console.log(result)
     return response.ok ? result : `${result.message}`;

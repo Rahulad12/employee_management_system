@@ -1,0 +1,75 @@
+.emp-attendance-container {
+    display: flex;
+}
+
+.attendance-header {
+    height: 20vh;
+    background: linear-gradient(to right, #4597d5, #23547b);
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.attendance-header h3 {
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+/* .emp-attendance-body {
+} */
+
+#search-attendance {
+    padding: 8px;
+    width: 200px;
+    margin: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.emp-attendance-body {
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        font-size: 16px;
+        margin-top: .5rem;
+        text-align: left;
+        background: #fff;
+        overflow: hidden;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    thead {
+        background-color: #007bff;
+        color: white;
+    }
+
+    th,
+    td {
+        padding: 12px 15px;
+        border-bottom: 1px solid #ddd;
+    }
+
+    tbody tr:nth-child(even) {
+        background-color: #f9f9f9;
+    }
+
+    tbody tr:hover {
+        background-color: #f1f1f1;
+    }
+
+    th {
+        font-weight: bold;
+    }
+
+    td {
+        color: #333;
+    }
+}
+
+.no-data {
+    text-align: center;
+    padding: 10px;
+    color: red;
+    font-weight: bold;
+}

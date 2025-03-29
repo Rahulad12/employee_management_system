@@ -1,4 +1,5 @@
 import { loginUser } from "../apiService/userApi.js";
+import { showToast } from "../component/toastMessage.js";
 import {
   authForm,
   emailErrorMessage,
@@ -6,7 +7,6 @@ import {
   isLoggedIn,
   passwordErrorMessage,
 } from "../utils/helper.js";
-
 // Redirect if already logged in
 if (isLoggedIn()) {
   window.location.href = "../screen/employeeDashboard.html";
@@ -22,7 +22,6 @@ export const userLogin = () => {
     const password = passwordInput.value.trim();
 
     // Clear previous error messages
-    errorMessage({ message: "", success: true });
     emailErrorMessage("");
     passwordErrorMessage("");
 
@@ -48,27 +47,17 @@ export const userLogin = () => {
 
       if (response.success) {
         localStorage.setItem("token", response?.user?.token);
-        errorMessage({
-          success: true,
-          message: response.message || "Login Successful",
-        });
-
+        showToast(response?.message, response.status)
         // Redirect after successful login
         setTimeout(() => {
           window.location.href = "../screen/employeeDashboard.html";
         }, 1000);
       } else {
-        errorMessage({
-          success: false,
-          message: response || "Login failed. Please try again.",
-        });
+        showToast("Login failed,please try again", "error")
       }
     } catch (error) {
       console.error("Error logging in:", error);
-      errorMessage({
-        success: false,
-        message: "An error occurred. Please try again later.",
-      });
+      showToast("An error occurred. please try agian later", "error")
     } finally {
       submitButton.disabled = false;
       submitButton.innerText = "Login";

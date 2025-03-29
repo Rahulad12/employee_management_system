@@ -1,3 +1,9 @@
+export const resetForm = (...data) => {
+  data.forEach((element) => {
+    element.value = "";
+  });
+  return data;
+};
 export const authForm = () => {
   const userAuthForm = document.getElementById("form");
   const emailInput = document.getElementById("email");
@@ -49,6 +55,35 @@ export const employeeLeaveElement = () => {
     totalLeave
   }
 }
+export const employeeAttendaceElement = () => {
+  const attendnaceContainer = document.getElementById("attendance-container")
+  const searchAttendanceInput = document.getElementById("search-attendance");
+  return { attendnaceContainer, searchAttendanceInput };
+}
+export const changePasswordElement = () => {
+  const changePasswordForm = document.getElementById("change-password-form");
+  const oldPasswordInput = document.getElementById("old-password");
+  const newPasswordInput = document.getElementById("new-password");
+  const confirmPasswordInput = document.getElementById("confirm-password");
+
+  const changePasswordButton = document.getElementById("change-password-btn");
+
+  return {
+    changePasswordForm,
+    oldPasswordInput,
+    newPasswordInput,
+    confirmPasswordInput,
+    changePasswordButton,
+  };
+};
+
+export const changeEmailElement = () => {
+  const changeEmailForm = document.getElementById("change-email-form");
+  const newEmailInput = document.getElementById("email");
+  const changeEmailButton = document.getElementById("change-email-btn");
+
+  return { changeEmailForm, newEmailInput, changeEmailButton };
+};
 export const isLoggedIn = () => {
   return !!localStorage.getItem("token");
 };
@@ -71,3 +106,40 @@ export const errorMessage = (message) => {
   errorElement.style.color = message.success ? "green" : "red";
   errorElement.style.display = message.message ? "block" : "none";
 };
+export const oldPasswordErrorMessage = (message) => {
+  const oldPasswordInput = document.getElementById(
+    "old-password-error-message"
+  );
+  oldPasswordInput.textContent = message;
+  oldPasswordInput.style.color = "red";
+  oldPasswordInput.style.display = message ? "block" : "none";
+};
+
+export const newPasswordErrorMessage = (message) => {
+  const newPasswordInput = document.getElementById(
+    "new-password-error-message"
+  );
+  newPasswordInput.textContent = message;
+  newPasswordInput.style.color = "red";
+  newPasswordInput.style.display = message ? "block" : "none";
+};
+
+export const confirmPasswordErrorMessage = (message) => {
+  const confirmPasswordInput = document.getElementById(
+    "confirm-password-error-message"
+  );
+  confirmPasswordInput.textContent = message;
+  confirmPasswordInput.style.color = "red";
+  confirmPasswordInput.style.display = message ? "block" : "none";
+};
+
+export const changeEmailErrorMessage = (message) => {
+  const changeEmailInput = document.getElementById(
+    "change-email-error-message"
+  );
+  changeEmailInput.textContent = message;
+  changeEmailInput.style.color =
+    message == "Email changed successfully" ? "green" : "red";
+  changeEmailInput.style.display = message ? "block" : "none";
+};
+

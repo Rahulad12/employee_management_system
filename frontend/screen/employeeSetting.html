@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../css/Dashboard.css" />
+    <link rel="stylesheet" href="../css/empSetting.css" />
+    <title>Employee Setting</title>
+</head>
+
+<body>
+    <div class="emp-setting-container">
+        <div id="side-bar"></div>
+        <div id="content">
+            <div class="emp-setting-header">
+                <h3>Employee Setting</h3>
+            </div>
+            <div class="setting-body">
+                <!-- Change Password Form -->
+                <div class="change-password-card">
+                    <h3>Change Password</h3>
+                    <form id="change-password-form">
+                        <div class="password-container">
+                            <label for="old-password">Current Password</label>
+                            <input type="password" id="old-password" placeholder="Enter your old password" />
+                            <span id="old-password-error-message"></span>
+
+                        </div>
+
+                        <div class="password-container">
+                            <label for="new-password">New Password</label>
+                            <input type="password" id="new-password" placeholder="Enter your new password" />
+                            <span id="new-password-error-message"></span>
+                        </div>
+
+                        <div class="password-container">
+                            <label for="confirm-password">Confirm Password</label>
+                            <input type="password" id="confirm-password" placeholder="Confirm your new password" />
+                            <span id="confirm-password-error-message"></span>
+                        </div>
+
+                        <button type="submit" id="change-password-btn" class="change-password-btn">
+                            Change Password
+                        </button>
+                    </form>
+                </div>
+
+                <!-- Change Email Form -->
+                <div class="change-email-card">
+                    <h3>Change Email</h3>
+                    <form id="change-email-form">
+                        <div class="email-container">
+                            <label for="email">Email</label>
+                            <input type="text" id="email" placeholder="Enter your email" />
+                            <span id="change-email-error-message"></span>
+                        </div>
+                        <button type="submit" id="change-email-btn" class="change-email-btn">
+                            Change Email
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="../js/controllers/employeeSetting.js" type="module"></script>
+</body>
+
+</html>

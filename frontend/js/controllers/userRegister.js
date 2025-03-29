@@ -1,4 +1,5 @@
 import { registerUser } from "../apiService/userApi.js";
+import { showToast } from "../component/toastMessage.js";
 import { authForm, errorMessage, isLoggedIn } from "../utils/helper.js";
 import checkEmailPassword from "../utils/validator.js";
 // Redirect if already logged in
@@ -16,8 +17,6 @@ export const userRegister = () => {
     const password = passwordInput.value.trim();
 
     // Clear previous general error message
-    errorMessage({ message: "", success: true });
-
     const validationError = checkEmailPassword(password, email); // Check email and password and return the error message here
     if (validationError) {
       return;
@@ -29,23 +28,14 @@ export const userRegister = () => {
     try {
       const response = await registerUser(email, password);
       if (response.success) {
-        errorMessage({
-          success: true,
-          message: response.message || "Registration successful",
-        });
+        showToast(response?.message, response.status);
         userAuthForm.reset(); // Reset form after successful registration
       } else {
-        errorMessage({
-          success: false,
-          message: response || "Registration failed",
-        });
+        showToast(response, "error")
       }
     } catch (error) {
       console.error("Error registering:", error);
-      errorMessage({
-        success: false,
-        message: "An error occurred. Please try again later.",
-      });
+      showToast("Error Registering", "error")
     } finally {
       submitButton.disabled = false;
       submitButton.innerText = "Register";

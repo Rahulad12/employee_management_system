@@ -17,15 +17,15 @@ export const employeeDashboard = async () => {
   //dashbord content
   dashboardBody.innerHTML = `
       ${stats
-        .map(
-          (item) => `
+      .map(
+        (item) => `
           <div class="stats-box">
             <h3>${item.title}</h3>
             <p>${item.value}</p>
           </div>
         `
-        )
-        .join("")}
+      )
+      .join("")}
   `;
 };
 protectedRoute(employeeDashboard);
