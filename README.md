@@ -12,7 +12,7 @@
     git clone https://github.com/Rahulad12/employee_management_system.git
     ```
 # For Setup Client(frontend)
-1. **Change The Directory
+1. **Change The Directory**
     ```sh
     cd frontend
     ```
