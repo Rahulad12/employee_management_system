@@ -3,7 +3,6 @@ import { showToast } from "../component/toastMessage.js";
 import {
   authForm,
   emailErrorMessage,
-  errorMessage,
   isLoggedIn,
   passwordErrorMessage,
 } from "../utils/helper.js";
